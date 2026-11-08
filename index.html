@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title> Speed Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">T</div>Speed Test</div>
+  <button class="icon-btn" id="theme" type="button">◐</button>
+</header>
+
+<main>
+  <h1>Test your typing speed</h1>
+  <p class="lead">Type the words as they appear. Your speed and accuracy are measured live, and your best score for each duration is saved on this device.</p>
+
+  <section class="card" aria-label="Typing test">
+    <div class="progress"><i id="prog"></i></div>
+    <div class="bar">
+      <div class="seg" role="group" aria-label="Test duration" id="dur">
+        <button type="button" data-t="15" aria-pressed="false">15s</button>
+        <button type="button" data-t="30" aria-pressed="true">30s</button>
+        <button type="button" data-t="60" aria-pressed="false">60s</button>
+        <button type="button" data-t="120" aria-pressed="false">2 min</button>
+      </div>
+      <div class="live" aria-live="off">
+        <div class="stat"><b id="sTime">30</b><span>seconds</span></div>
+        <div class="stat"><b id="sWpm">0</b><span>WPM</span></div>
+        <div class="stat"><b id="sAcc">100%</b><span>accuracy</span></div>
+      </div>
+    </div>
+
+    <div id="stage" tabindex="0" aria-label="Typing area. Click and start typing.">
+      <div id="words" class="blur"></div>
+      <div id="focusMsg">Click here or press any key to begin</div>
+      <input id="hidden" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Type here">
+    </div>
+
+    <div id="result">
+      <div class="big">
+        <div><div class="n"><span id="rWpm">0</span><small>WPM</small></div></div>
+        <div><div class="n sec"><span id="rAcc">0</span>%<small>accuracy</small></div></div>
+      </div>
+      <p id="rBest" style="margin:0 0 20px;color:var(--muted)"></p>
+      <svg id="chart" role="img" aria-label="Words per minute over time"></svg>
+      <div class="grid">
+        <div><b id="rCorrect">0</b><span>correct characters</span></div>
+        <div><b id="rWrong">0</b><span>incorrect characters</span></div>
+        <div><b id="rWords">0</b><span>words completed</span></div>
+        <div><b id="rRaw">0</b><span>raw speed (WPM)</span></div>
+      </div>
+      <button class="primary" id="again" type="button">Try again</button>
+    </div>
+
+    <div class="foot" id="foot">
+      <span><kbd>Tab</kbd> restart</span>
+      <span>The timer starts when you type your first letter</span>
+    </div>
+  </section>
+</main>
+
+<footer>  Designed & Developed by <a href="https://github.com/HossainLijon">Hossain Mahmud</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
