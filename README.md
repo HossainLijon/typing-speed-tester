@@ -1,1 +1,1 @@
-# typing-speed-tester
+https://hossainlijon.github.io/typing-speed-tester/
